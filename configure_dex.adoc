@@ -1,0 +1,127 @@
+
+
+.From k8s.io:
+----
+A RoleBinding may also reference a ClusterRole to grant the permissions to namespaced resources defined in the ClusterRole within the RoleBinding’s namespace. This allows administrators to define a set of common roles for the entire cluster, then reuse them within multiple namespaces.
+----
+
+.Creating new roles
+* One way to get the apiGroups, resources, and verbs correct is to review the output of `kubectl get clusterrole admin -o yaml  | less`
+* Can also review the existing Roles: `kubectl get roles --all-namespaces` or the existing ClusterRoles: `kubectl get clusterroles`
+* An example role manifest:
+----
+cat <<EOF> kubeflow-user.yaml
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: kubeflow-user
+  namespace: kubeflow
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods/attach
+  - pods/exec
+  - pods/portforward
+  - pods/proxy
+  - secrets
+  - services/proxy
+  verbs:
+  - get
+  - list
+  - watch
+EOF
+----
+* Apply that manifest with `kubectl apply -f kubeflow-user.yaml`
+
+.Create a new rolebinding that references the LDAP group that contains the LDAP users that will access a specific namespace with admin priveliges
+* Format is `kubectl create rolebinding <name of new rolebinding> -n <namespace> [--clusterrole=<name> | --role=<name>] [--group=<LDAP group name>] [--user=<LDAP user name>]`
+----
+kubectl create rolebinding admin-access -n kubeflow --clusterrole=admin --group=admins
+----
+* This clusterrolebinding will give full privileges to anyone in the LDAP group admins
+** Can be used for actual admins or to troubleshoot permissions issues
+----
+kubectl create clusterrolebinding ldap-admin-access --clusterrole=cluster-admin --group=admins
+----
+
+////
+.For testing a user level rolebinding against the LDAP container:
+* Create a new rolebinding for just the LDAP admin user: `kubectl create rolebinding admin-access -n default --clusterrole=admin --user=admin`
+////
+
+.Update the oidc-dex-config configmap:
+*
+
+CAUTION: Be sure to verify the full Distinguished Names for everything that goes into the configmap. Anything that is not correct will cause login failures
+
+* `kubectl --namespace=kube-system edit configmap oidc-dex-config`
+* Just need to update the connectors portion
+* Good reference for what to update at: https://documentation.suse.com/suse-caasp/4/single-html/caasp-deployment/#_integrate_external_ldap_tls
+** If a rootUser.ldif file is available, gather the needed information from it:
+*** Set the filename: `export FILENAME=""`
+*** For `host:` 
+**** Find the FQDN and port for the LDAP server: `grep ^dn:\ dnaHostname $FILENAME`
+**** Insert one space and the IP address or FQDN and port for the LDAP server
+*** For `rootCAData:` follow the instructions in the document above to base64 encode the root CA Certificate
+**** Insert one space and the encoded certificate after `rootCAData:`
+**** If no root CA certificate from the LDAP server is available, delete the `rootCAData:` line and insert `insecureNoSSL: true` and `insecureSkipVerify: true`
+*** For `bindDN:` 
+**** Set the username: `export USERNAME=""`
+**** Search for `grep ^dn:\ uid=$USERNAME $FILENAME`
+**** Insert one space and the full path for the user after `bindDN:`
+*** For `baseDN:` under `userSearch:`
+**** Search for `grep -i ^dn:\ cn=users $FILENAME`
+**** Insert one space and the full path for the users object after `baseDN:`
+*** For `baseDN:` under `groupSearch:`
+**** Search for `grep -i ^dn:\ cn=groups $FILENAME`
+**** Insert one space and the full path for the users object after `baseDN:`
+* Write and close the editor
+
+CAUTION: May of of the required userSearch and groupSearch parameters are set based on the specific configuration of the LDAP server. Consult with the LDAP administrator to set these correctly.
+
+* Restart Dex and Gangway pods:
+* `kubectl --namespace=kube-system delete pod -l app=oidc-dex`
+* Verify new pods were started and are running: `kubectl get pods -n kube-system | grep dex`
+* `kubectl --namespace=kube-system delete pod -l app=oidc-gangway`
+* Verify new pods were started and are running: `kubectl get pods -n kube-system | grep gangway`
+
+.Add the Dex self-signed cert to the Admin node:
+
+NOTE: This seems to aleviate this error: "F1120 11:26:42.346992   10908 login.go:88] error on login: auth failed: failed to query provider "https://master.caaspv4.com:32000": Get https://master.caaspv4.com:32000/.well-known/openid-configuration: x509: certificate signed by unknown authority"Could also try `skube auth login` with: "-k, --insecure                Insecure SSL connection"
+
+* `kubectl exec -it -n kube-system $(kubectl get pod -n kube-system -l app=oidc-dex -o name | head -1) cat /etc/dex/pki/ca.crt`
+----
+sudo cat <<EOF> /tmp/master.caaspv4.com:32000-ca.crt 
+-----BEGIN CERTIFICATE-----
+
+....
+
+-----END CERTIFICATE-----
+EOF
+----
+* `sudo mv /tmp/master.caaspv4.com\:32000-ca.crt /etc/pki/trust/anchors/`
+* `sudo update-ca-certificates`
+
+.Test authentication:
+* `skuba auth login -s https://master.caaspv4.com:32000`
+
+
+.Configure Gangway to accept Dex's certs
+* `cp -p /tmp/master.caaspv4.com:32000-ca.crt /tmp/master.caaspv4.com:32001-ca.crt`
+----
+for WORKER in `grep wrkr .all_nodes`; do echo $WORKER; scp /tmp/mstr.suse.hpc.local\:32001-ca.crt $WORKER:/tmp/; ssh $WORKER sudo mv /tmp/mstr.suse.hpc.local\:32001-ca.crt /etc/pki/trust/anchors/; ssh $WORKER sudo update-ca-certificates; done
+----
+
+
+
+
+
+
+
+
+
+
+
+// vim: set syntax=asciidoc:
+
