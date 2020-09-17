@@ -51,11 +51,11 @@ Device collection /
 #### Architectural Diagram
 Sample for general SLES / SUSE Products / Databases / Analytics engine / Embedded / Reporting
 
-#### Stakeholders affe in Data solutions
+#### Stakeholders interested in Data solutions
 Application developer / Data scientist / Operations / Marketing / Sys Eng
 
 #.A Closer Look: The Data Scientist
-#The Data Scientist is the most important element in any Artificial Intelligence initiative. The more time she can spend creating, analyzing, and refining her data models more chances of success the project will have. Unfortunately, the reality is that there are several other elements of the project that will siphone off her time.
+#The Data Scientist is the most important element in any Artificial Intelligence initiative. The more time she can spend creating, analysing, and refining her data models more chances of success the project will have. Unfortunately, the reality is that there are several other elements of the project that will siphone off her time.
 
 
 
