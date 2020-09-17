@@ -20,6 +20,15 @@ The goal of the Data solutions Partner stack is to identify partners in the data
 #### SUSE : The Solution
 The SUSE One Partner Stacks will allow partners the flexibility to tailor components based on their go to market and sales execution goals.  Components will allow like-for-like swapping of hardware brands, cloud platforms, or complementary software layers.
 
+#### Overview of Data Components
+- Traditional SQL
+- NOSQL
+- Cloud delivery
+- Application support
+- Analytics engine
+- Reporting
+- Other
+
 #### Modular Configurations
 
 Data partners can be categorized into several buckets.  Important to note, many of these can be interchangeable for a final customer solutions.  Categories discussed include:
