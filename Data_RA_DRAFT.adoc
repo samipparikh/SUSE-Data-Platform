@@ -1,4 +1,4 @@
-## SUSE Data Platfor Brings Order To The Data application Infrastructure Landscape
+## SUSE Data Platform enables the Data application Infrastructure Landscape
 
 #### Data Platform: The Opportunity
 :CompanyName: SUSE
@@ -12,26 +12,40 @@
 
 #### Data Platform: The Challenge
 
-The world of Artificial Intelligence is growing at a break-neck pace. New technologies in AI/ML workspace, infrastructure, data maanagement and data analysis are being released faster than in any other sector of Enterprise technology. Unfortunately, as much exciting AI technology there is available, there is a massive lack of available talent to take full advantage of it.
+The changing landscape of Data technologies is growing at a rapid pace. The traditional database market has grown into various different areas ranging from legacy enterprise support to embedded device analytics.  And a wide-range of competing and complementary products can be used in an interchangeable format.
 
-Several industry analysts have pointed out the https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf[Hidden Technical Debt of Machine Learning Systems], but what is less well understood is how the limited availability of qualified Data Scientists, AI Engineers, and AI Operations personnel forces AI teams to share the burden of the techncial debt. Often, the need for highly skilled engineers and scientists to work outside their specialties causes significant detriment their primary tasks, and to the overall project.
+The goal of the Data solutions Partner stack is to identify partners in the data operations space which complement one another, and augment value add of SUSE technology and hardware partners.  By design, each module is intended to avoid lock-in and encourage flexibility of a solution to address existing market needs
 
 
-#### SUSE AI Orchetrator: The Solution
-When SUSE set out to create a new, indispensible AI/ML tool for its customers, we were certain that we didn't want to create just another workspace/orchestrator/training/analysis tool. What the wild west that is AI/ML needs more than anything else is a tool that returns control of the tools to the AI consumer and improves the chances of success for every AI/ML project.
+#### SUSE : The Solution
+The SUSE One Partner Stacks will allow partners the flexibility to tailor components based on their go to market and sales execution goals.  Components will allow like-for-like swapping of hardware brands, cloud platforms, or complementary software layers.
 
-From the outset, in creating the SUSE AI Orchestrator we followed three primary guidelines:
-* Enable Data Scientists to stay focused on the creative end of data model design and development
-* Significantly improve the visibility and control over the AI Platforms, as well as the expendatures that go with them, for the AI Operations teams
-* Improve cross team visibility and enable new avenues of collaboration between Data Scientists, AI Engineers, and AI Operators
-* Enable model pipeline execution on virtually any platform, from a single workstation, to Kubeflow, to any public cloud provider; all without having to rewrite any part of the model or pipeline definition.
+#### Modular Configurations
+
+In that context, data partners can be categorized into several buckets.  Important to note, many of these can be interchangeable for a final customer solutions'.  Categories discusses include
+SQL-based relational database management systems
+•	Oracle Database
+•	MySQL
+•	Microsoft SQL Server
+•	PostgreSQL
+•	Maria DB
+Non-relational DB (unstructured)
+•	Redis
+•	MongoDB
+•	Couchbase Server
+•	Neo4j
+•	JanusGraph
+•	Apache Cassandra
+•	Hbase
+
+
 
 .A Closer Look: The Data Scientist
 The Data Scientist is the most important element in any Artificial Intelligence inititive. The more time she can spend creating, analyzing, and refining her data models more chances of success the project will have. Unfortunately, the reality is that there are several other elements of the project that will siphone off her time.
 
 Often, Data Scientists prefer to build, and initally test, their models on their own local workstation. This gives them full control of the AI platform and tends to work well for the initial process of model development. However, to move the model into the next phases of development, the work needs to continue with more computing power and a much larger data set. In addition, many data processing and model tuning steps must be taken as the model (and even multiple variations of the model) continue through development.
 
-Unfortunately, far too often a data science team will perform many of these operations manually, or with custom scripts and "one-off" tools. In the end, they will spend more time cultivating a custom ecosphere for a single project than developing the model. While most every data scientist understands the benefit of leveraging AI pipeline systems such as Apache Airflow and Kubeflow, it also represents even more work to learn and code the meta language to convert all of the data processing and model valdation/tuning steps into a pipeline. This is where the SUSE {productname} fulfills its promise of keeping data scientists focused on creative endeavors. By analyzing the ML model, the SUSE {productname} can determine the flow of tasks required to develop a funcioning pipeline for the model development. During this analysis, the {productname} will develop and display a directed acyclic graph the tasks and even show the progress of an analytic run of the model through the graph.
+Unfortunately, far too often a data science team will perform many of these operations manually, or with custom scripts and "one-off" tools. In the end, they will spend more time cultivating a custom ecosphere for a single project than developing the model. While most every data scientist understands the benefit of leveraging AI pipeline systems such as Apache Airflow and Kubeflow, it also represents even more work to learn and code the meta language to convert all of the data processing and model validation/tuning steps into a pipeline. This is where the SUSE {productname} fulfills its promise of keeping data scientists focused on creative endeavors. By analyzing the ML model, the SUSE {productname} can determine the flow of tasks required to develop a funcioning pipeline for the model development. During this analysis, the {productname} will develop and display a directed acyclic graph the tasks and even show the progress of an analytic run of the model through the graph.
 
 Translating the data analysis model into a full pipeline that collects, organizes and cleans the larger dataset; provides the desired final output (NTS: Need much better view of what it takes to go from basic model to runnable pipeline) takes valuable time that the Data Scientist could be using to continue to build a model into a production ready artifact.
 
