@@ -24,6 +24,7 @@ The SUSE One Partner Stacks will allow partners the flexibility to tailor compon
 
 Data partners can be categorized into several buckets.  Important to note, many of these can be interchangeable for a final customer solutions.  Categories discussed include:
 SQL-based relational database management systems
+
 •	Oracle Database
 •	MySQL
 •	Microsoft SQL Server
@@ -31,6 +32,7 @@ SQL-based relational database management systems
 •	Maria DB
 
 Non-relational DB (unstructured)
+
 •	Redis
 •	MongoDB
 •	Couchbase Server
@@ -38,6 +40,7 @@ Non-relational DB (unstructured)
 •	JanusGraph
 •	Apache Cassandra
 •	Hbase
+
 
 
 #### What are the components of an	operator service?
