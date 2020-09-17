@@ -41,11 +41,11 @@ Non-relational DB (unstructured)
 
 
 #### What are the components of an	operator service?
-Edge core <p>
-on premise <p>
-Cloud Based delivery <p>
-Embedded <p>
-Device collection <p>
+Edge core /
+on premise /
+Cloud Based delivery /
+Embedded /
+Device collection /
 
 
 
