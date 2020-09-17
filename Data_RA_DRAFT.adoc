@@ -12,7 +12,7 @@
 
 #### Data Platform: The Challenge
 
-The changing landscape of Data technologies is growing at a rapid pace. The traditional database market has grown into various different areas ranging from legacy enterprise support to embedded device analytics.  And a wide-range of competing and complementary products can be used in an interchangeable format.
+The changing landscape of data technologies is growing at a rapid pace. The traditional database market has grown into various different areas ranging from legacy enterprise support to embedded device analytics.  And a wide-range of competing and complementary products can be used in an interchangeable format.
 
 The goal of the Data solutions Partner stack is to identify partners in the data operations space which complement one another, and augment value add of SUSE technology and hardware partners.  By design, each module is intended to avoid lock-in and encourage flexibility of a solution to address existing market needs
 
@@ -54,7 +54,7 @@ Non-relational DB (unstructured)
 
 #### What are the components of an	operator service?
 •	Edge core
-•	on premise
+•	On-premise
 •	Cloud Based delivery
 •	Embedded
 •	Device collection
@@ -71,7 +71,7 @@ Non-relational DB (unstructured)
 #### Stakeholders interested in Data solutions
 •	Application developer
 •	Data scientist
-•	Operations 
+•	Operations
 •	Marketing
 •	Sys Eng
 
