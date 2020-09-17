@@ -22,7 +22,7 @@ The SUSE One Partner Stacks will allow partners the flexibility to tailor compon
 
 #### Modular Configurations
 
-In that context, data partners can be categorized into several buckets.  Important to note, many of these can be interchangeable for a final customer solutions.  Categories discussed include:
+Data partners can be categorized into several buckets.  Important to note, many of these can be interchangeable for a final customer solutions.  Categories discussed include:
 SQL-based relational database management systems
 •	Oracle Database
 •	MySQL
@@ -41,11 +41,11 @@ Non-relational DB (unstructured)
 
 
 #### What are the components of an	operator service?
-Edge core
-on premise
-Cloud Based delivery
-Embedded
-Device collection
+Edge core /
+on premise /
+Cloud Based delivery /
+Embedded /
+Device collection /
 
 
 
