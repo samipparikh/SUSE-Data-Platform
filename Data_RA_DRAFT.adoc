@@ -93,33 +93,8 @@ Time series applications capture and measure state changes over time and are oft
 Our Intelligent Data Platform Supports Your IoT Apps from Edge to Core
 From the devices at the edge of the network to the IoT applications at the core, our Intelligent Data Platform (IDP) accelerates and de-risks the delivery and operation of your IoT applications. We start with MongoDB, the world’s most popular database, and bind in complementary technologies such as Apache Kafka to become part of an integrated, event-driven IoT platform.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Analytics with MongoDB
-MongoDB offers many options for machine learning and analytics. The MongoDB Connector for Apache Spark lets you access Spark libraries for streaming, machine learning, and graph APIs. Unleash the power of Python in your analysis with the native MongoDB Python driver or our array of other drivers supporting popular analytics languages like R. To visualize your IoT data use the MongoDB Connector for BI with third-party reporting tools like Tableau, Microstrategy, and others, or use MongoDB Charts, the easiest way to visualize your data.
-MongoDB Connector for Apache Spark
-Connector for BI
-MongoDB Charts
-MongoDB’s IoT Reference Architecture
-MongoDB's IoT Reference Architecture
-Why MongoDB?
-
-
-
-
-
+Analytics
+ Offers many options for machine learning and analytics. Access Spark libraries for streaming, machine learning, and graph APIs.  To visualize your IoT data use BI with third-party reporting tools like Tableau, Microstrategy, -- the easiest way to visualize your data.
 
 Ease: Documents match objects in code, making it faster and easier for developers to build new IoT apps. JSON is the language of APIs, which means you can use the same data model and syntax from the device to the backend. This increases developer productivity and enhances both efficient API design and data model consistency
 
@@ -132,7 +107,7 @@ Integration: Work seamlessly with all of the leading systems for streaming data,
 Security: Robust access controls, auditing, and encryption controls protect valuable IoT data both in flight and at rest
 
 With You Every Step of the Way
-MongoDB Professional Services engages with you to build an Innovation Accelerator and to provide Innovation Solution Kits, combining advisory consulting, program governance, and application lifecycle expertise – all cultivated from best practices developed with the world’s most innovative organizations. This helps you capture the full value of your IoT deployment with always-on applications to act on the huge volumes of new IoT sensor data. Learn more →
+Professional Services engages with you to build an Innovation Accelerator and to provide Innovation Solution Kits, combining advisory consulting, program governance, and application lifecycle expertise – all cultivated from best practices developed with the world’s most innovative organizations. This helps you capture the full value of your IoT deployment with always-on applications to act on the huge volumes of new IoT sensor data. Learn more →
 
 
 
