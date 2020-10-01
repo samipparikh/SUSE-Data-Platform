@@ -94,7 +94,6 @@ Our Intelligent Data Platform Supports Your IoT Apps from Edge to Core
 From the devices at the edge of the network to the IoT applications at the core, our Intelligent Data Platform (IDP) accelerates and de-risks the delivery and operation of your IoT applications. We start with MongoDB, the world’s most popular database, and bind in complementary technologies such as Apache Kafka to become part of an integrated, event-driven IoT platform.
 
 #### Analytics
- Offers many options for machine learning and analytics. Access Spark libraries for streaming, machine learning, and graph APIs.  To visualize your IoT data use BI with third-party reporting tools like Tableau, Microstrategy, -- the easiest way to visualize your data.
 
 Ease: Documents match objects in code, making it faster and easier for developers to build new IoT apps. JSON is the language of APIs, which means you can use the same data model and syntax from the device to the backend. This increases developer productivity and enhances both efficient API design and data model consistency
 
