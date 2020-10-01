@@ -105,6 +105,12 @@ Integration: Work seamlessly with all of the leading systems for streaming data,
 
 Security: Robust access controls, auditing, and encryption controls protect valuable IoT data both in flight and at rest
 
+*** ADD Business Intelligence
+
+*** Add other Enterprise Application  
+
+
+
 #### Professional Services
 Professional Services engages with you to build an Innovation Accelerator and to provide Innovation Solution Kits, combining advisory consulting, program governance, and application lifecycle expertise – all cultivated from best practices developed with the world’s most innovative organizations. This helps you capture the full value of your IoT deployment with always-on applications to act on the huge volumes of new IoT sensor data. Learn more →
 
