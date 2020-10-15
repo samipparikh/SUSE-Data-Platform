@@ -50,7 +50,12 @@ Non-relational DB (unstructured)
 •	Apache Cassandra
 •	Hbase
 
-
+#### Likely initial targets
+•	MongoDB
+•	Redis
+•	PostgreSQL
+•	Maria DB
+•	Oracle Database
 
 #### What are the components of an	operator service?
 •	Edge core
@@ -94,9 +99,11 @@ Our Intelligent Data Platform Supports Your IoT Apps from Edge to Core
 From the devices at the edge of the network to the IoT applications at the core, our Intelligent Data Platform (IDP) accelerates and de-risks the delivery and operation of your IoT applications. We start with MongoDB, the world’s most popular database, and bind in complementary technologies such as Apache Kafka to become part of an integrated, event-driven IoT platform.
 
 #### Target platforms
-- Cloud platforms
 - SLES
-- container (CF or K8s)
+- Virtualized
+- Container (CF or K8s)
+- CSP
+- Hybrid (On-Premise / CSP)
 
 #### Analytics
 
@@ -126,10 +133,15 @@ Performance
 - Terraform
 - Salt
 
+#### Storage
+- Object
+- Block
+- Hardware dependent
+- Cloud-Based
+- SES
+
 #### Professional Services
-Professional Services engages with you to build an Innovation Accelerator and to provide Innovation Solution Kits, combining advisory consulting, program governance, and application lifecycle expertise – all cultivated from best practices developed with the world’s most innovative organizations. This helps you capture the full value of your IoT deployment with always-on applications to act on the huge volumes of new IoT sensor data. Learn more →
-
-
+Professional Services engages with you to build Solution Kits, combining advisory consulting, hardware vendor selection and application lifecycle expertise – all cultivated from best practices developed with the world’s most innovative organizations.
 
 
 
