@@ -126,8 +126,8 @@ Security
 Performance
 
 #### Monitoring
---SUMA
---Other Data monitoring tools
+- SUMA
+- Other Data monitoring tools
 
 #### Automation / Deployment
 - Terraform
